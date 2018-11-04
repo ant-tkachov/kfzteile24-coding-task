@@ -1,6 +1,6 @@
 # kfzteile24 Coding Task
 
-##Solution Structure
+## Solution Structure
 
 The current implemented solution is overcomplicated by purpose. The task itself does not require such the solution. The same result can be achieved in a simpler way. This approached was chosen to demonstrate my vision to the structure of the solution and to mention a few crucial topics which could not be noticeable with a simple solution.
 
