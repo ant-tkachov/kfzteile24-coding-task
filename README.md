@@ -87,7 +87,7 @@ As a result 2 tests are passed:
 
 ![alt text](https://github.com/ant-tkachov/kfzteile24-coding-task/blob/master/Documentation/images/figure2.png "Figure 2: All tests passed")
 
-### Run UI using Swagger <a name="swagger-tests"></a>
+### Test using Swagger <a name="swagger-tests"></a>
 
 To perform the tests using Swagger UI:
 
