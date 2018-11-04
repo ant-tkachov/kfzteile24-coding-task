@@ -70,6 +70,7 @@ To run the tests from the command line:
 1. Open `Developer Command Prompt for VS 2017` and navigation to the folder where the `kfzteile24.CodingTask.sln` is located
 2. Run: `dotnet restore`
 3. Run: `dotnet test kfzteile24.CodingTask.BusinessLayer.Tests`
+
 As the result 2 tests passed:
 ![alt text](https://github.com/ant-tkachov/kfzteile24-coding-task/blob/master/Documentation/images/figure2.png "Figure 2: All tests passed")
 
