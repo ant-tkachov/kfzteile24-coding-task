@@ -66,7 +66,7 @@ There is no logic in the controller, therefore no unit tests are needed.
 
 To run the application from the command line:
 
-1. Clone the repository: git clone [https://github.com/ant-tkachov/kfzteile24-coding-task](https://github.com/ant-tkachov/kfzteile24-coding-task)
+1. Clone the repository: `git clone [https://github.com/ant-tkachov/kfzteile24-coding-task](https://github.com/ant-tkachov/kfzteile24-coding-task)`
 2. Open `Developer Command Prompt for VS 2017` and navigate to the folder where the `kfzteile24.CodingTask.sln` is located
 3. Run: `dotnet restore`
 4. Run: `dotnet run --project kfzteile24.CodingTask.Web`
