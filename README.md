@@ -1,8 +1,20 @@
 # kfzteile24 Coding Task
 
-## Solution Structure
+## Table of contents
+1. [Solution Structure](#solution-structure)
+    1. [kfzteile24.CodingTask.DataLayer](#data-layer)
+    2. [kfzteile24.CodingTask.BusinessLayer](#business-layer)
+    3. [kfzteile24.CodingTask.BusinessLayer.Tests](#business-layer-tests)
+    4. [kfzteile24.CodingTask.Web](#web)
+2. [Installation](#installation)
+3. [Testing](#testing)
+    1. [Run unit tests from command line](#unt-tests)
+    2. [Run UI using Swagger](#swagger-tests)
+4. [Further improvements](#further-improvements)
 
-The current implemented solution is overcomplicated by purpose. The task itself does not require such the solution. The same result can be achieved in a simpler way. This approached was chosen to demonstrate my vision to the structure of the solution and to mention a few crucial topics which could not be noticeable with a simple solution.
+## Solution Structure <a name="solution-structure"></a>
+
+The current implemented solution is overcomplicated by purpose. The task itself does not require such the solution. The same result can be achieved in a simpler way. This approache was chosen to demonstrate my vision to the structure of the solution and to mention a few crucial topics which could not be noticeable with a simple solution.
 
 The provided solution contains the following projects:
 * kfzteile24.CodingTask.DataLayer
@@ -12,7 +24,7 @@ The provided solution contains the following projects:
 
 All the public methods have their comments. The private methods can have the comments, it depends on the complexity of the methods and the preferences of the team or developers. In the ideal case the all the methods have to be self-descriptive.
 
-### kfzteile24.CodingTask.DataLayer
+### kfzteile24.CodingTask.DataLayer <a name="data-layer"></a>
 
 In the project there is an interface (`ICounterRepository`) which defines methods to get and put the value from/into a storage. The interface allows us to implement classes where we can provide functionality to use different types of storages.
 
@@ -22,7 +34,7 @@ In the real world we usually work with databases. Just for the demo purposes the
 
 In the best case the Data Layer project should have no logic besides the logic to store and retrieve data.
 
-### kfzteile24.CodingTask.BusinessLayer
+### kfzteile24.CodingTask.BusinessLayer <a name="business-layer"></a>
 
 The project contains all the logic. The interface `CounterService` defines necessary method to make the task done.
 
@@ -32,7 +44,7 @@ The implementation provided in `CounterService`, hence there is `kfzteile24.Codi
 
 The `CounterService` uses `ICounterReository` described above.
 
-### kfzteile24.CodingTask.BusinessLayer.Tests
+### kfzteile24.CodingTask.BusinessLayer.Tests <a name="business-layer-tests"></a>
 
 The project contains the unit tests to test the implemented business logic. There is no UI in the current task, therefore there is no need to provide UI tests. Also, in the current solution no need to add unit tests for the Data Layer.
 
@@ -42,7 +54,7 @@ To create the tests the following third party libraries are used:
 
 Some of the projects might require integration tests. The integration tests have their own pros and cons. In scope of this task the integration tests are not needed.
 
-### kfzteile24.CodingTask.Web
+### kfzteile24.CodingTask.Web <a name="web"></a>
 
 The project contains the controller `CounterController` with only two action methods. The method to get the current counter value is the HTTP GET method. The method to increase (in other words update) the counter values is the HTTP POST method.
 
@@ -50,7 +62,7 @@ The controller uses the `ICounterService` service described above.
 
 There is no logic in the controller, therefore no unit tests needed.
 
-## Installation
+## Installation <a name="installation"></a>
 
 To run the application from the command line:
 
@@ -62,9 +74,9 @@ To run the application from the command line:
 5. Open a browser, copy and paste URL: [http://localhost:5000/swagger](http://localhost:5000/swagger)
 *Note*: in the provided description the assigned port number is 5000, in your case it can have another number.
 
-## Testing
+## Testing <a name="testing"></a>
 
-### Run unit tests from command line
+### Run unit tests from command line <a name="unt-tests"></a>
 
 To run the tests from the command line:
 1. Open `Developer Command Prompt for VS 2017` and navigation to the folder where the `kfzteile24.CodingTask.sln` is located
@@ -75,7 +87,7 @@ As the result 2 tests passed:
 
 ![alt text](https://github.com/ant-tkachov/kfzteile24-coding-task/blob/master/Documentation/images/figure2.png "Figure 2: All tests passed")
 
-### Run UI using Swagger
+### Run UI using Swagger <a name="swagger-tests"></a>
 
 To perform the tests using Swagger UI:
 
@@ -87,7 +99,7 @@ To perform the tests using Swagger UI:
 ![alt text](https://github.com/ant-tkachov/kfzteile24-coding-task/blob/master/Documentation/images/figure3.png "Figure 3: Response of /api/counter/current call")
 ![alt text](https://github.com/ant-tkachov/kfzteile24-coding-task/blob/master/Documentation/images/figure4.png "Figure 4: Response of /api/current/increment call")
 
-## Further improvements
+## Further improvements <a name="further-improvements"></a>
 
 There are tons of ways to improve the provided implementation.
 
