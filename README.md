@@ -14,7 +14,7 @@
 
 ## Solution Structure <a name="solution-structure"></a>
 
-The current implemented solution is overcomplicated by purpose. The task itself does not require such the solution. The same result can be achieved in a simpler way. This approache was chosen to demonstrate my vision to the structure of the solution and to mention a few crucial topics which could not be noticeable with a simple solution.
+The current implemented solution is overcomplicated by purpose. The task itself does not require such solution. The same result can be achieved in a simpler way. This approach was chosen to demonstrate my vision of the structure of the solution and to mention a few crucial topics which could not be presented with a simple solution.
 
 The provided solution contains the following projects:
 * kfzteile24.CodingTask.DataLayer
@@ -22,7 +22,7 @@ The provided solution contains the following projects:
 * kfzteile24.CodingTask.Web
 * kfzteile24.CodingTask.BusinessLayer.Tests
 
-All the public methods have their comments. The private methods can have the comments, it depends on the complexity of the methods and the preferences of the team or developers. In the ideal case the all the methods have to be self-descriptive.
+All the public methods have their comments. The private methods can have the comments, it depends on the complexity of the methods and the preferences of the team or developers. In the ideal case all the methods have to be self-descriptive.
 
 ### kfzteile24.CodingTask.DataLayer <a name="data-layer"></a>
 
@@ -30,23 +30,23 @@ In the project there is an interface (`ICounterRepository`) which defines method
 
 The project contains implementation (`CounterMemoryRepository`) of functionality to use memory class which is sufficient for the task.
 
-In the real world we usually work with databases. Just for the demo purposes there is class `CounterDbRepository` with no implemented methods. If needed the methods in the class can be implemented.
+In the real world we usually work with databases. Just for the demo purposes there is class `CounterDbRepository` with no implemented methods. If needed, the methods in the class can be implemented.
 
 In the best case the Data Layer project should have no logic besides the logic to store and retrieve data.
 
 ### kfzteile24.CodingTask.BusinessLayer <a name="business-layer"></a>
 
-The project contains all the logic. The interface `CounterService` defines necessary method to make the task done.
+The project contains all the logic. The interface `CounterService` defines necessary methods to get the task done.
 
 Using the interfaces allows us to use the Dependency Injection with all the benefits which we can have from it, for instance adding unit tests, replacing some parts of the functionality without touching the others.
 
-The implementation provided in `CounterService`, hence there is `kfzteile24.CodingTask.BusinessLayer.Tests` which contains the test to cover the implemented logic.
+The implementation is provided in `CounterService`, hence there is `kfzteile24.CodingTask.BusinessLayer.Tests` project which contains the tests to cover the implemented logic.
 
 The `CounterService` uses `ICounterReository` described above.
 
 ### kfzteile24.CodingTask.BusinessLayer.Tests <a name="business-layer-tests"></a>
 
-The project contains the unit tests to test the implemented business logic. There is no UI in the current task, therefore there is no need to provide UI tests. Also, in the current solution no need to add unit tests for the Data Layer.
+The project contains the unit tests to test the implemented business logic. There is no UI in the current task, therefore there is no need to provide UI tests. Also, in the current solution there is no need to add unit tests for the Data Layer.
 
 To create the tests the following third party libraries are used:
 * xUnit
@@ -60,14 +60,14 @@ The project contains the controller `CounterController` with only two action met
 
 The controller uses the `ICounterService` service described above.
 
-There is no logic in the controller, therefore no unit tests needed.
+There is no logic in the controller, therefore no unit tests are needed.
 
 ## Installation <a name="installation"></a>
 
 To run the application from the command line:
 
 1. Clone the repository: git clone [https://github.com/ant-tkachov/kfzteile24-coding-task](https://github.com/ant-tkachov/kfzteile24-coding-task)
-2. Open `Developer Command Prompt for VS 2017` and navigation to the folder where the `kfzteile24.CodingTask.sln` is located
+2. Open `Developer Command Prompt for VS 2017` and navigate to the folder where the `kfzteile24.CodingTask.sln` is located
 3. Run: `dotnet restore`
 4. Run: `dotnet run --project kfzteile24.CodingTask.Web`
 ![alt text](https://github.com/ant-tkachov/kfzteile24-coding-task/blob/master/Documentation/images/figure1.png "Figure 1: The application is up and running")
@@ -76,14 +76,14 @@ To run the application from the command line:
 
 ## Testing <a name="testing"></a>
 
-### Run unit tests from command line <a name="unt-tests"></a>
+### Run unit tests from the command line <a name="unt-tests"></a>
 
 To run the tests from the command line:
-1. Open `Developer Command Prompt for VS 2017` and navigation to the folder where the `kfzteile24.CodingTask.sln` is located
+1. Open `Developer Command Prompt for VS 2017` and navigate to the folder where the `kfzteile24.CodingTask.sln` is located
 2. Run: `dotnet restore`
 3. Run: `dotnet test kfzteile24.CodingTask.BusinessLayer.Tests`
 
-As the result 2 tests passed:
+As a result 2 tests are passed:
 
 ![alt text](https://github.com/ant-tkachov/kfzteile24-coding-task/blob/master/Documentation/images/figure2.png "Figure 2: All tests passed")
 
@@ -91,7 +91,7 @@ As the result 2 tests passed:
 
 To perform the tests using Swagger UI:
 
-1. Open `Developer Command Prompt for VS 2017` and navigation to the folder where the `kfzteile24.CodingTask.sln` is located
+1. Open `Developer Command Prompt for VS 2017` and navigate to the folder where the `kfzteile24.CodingTask.sln` is located
 2. Run: `dotnet restore`
 3. Run: `dotnet run --project kfzteile24.CodingTask.Web`
 4. Open [http://localhost:5000/swagger/index.html?url=/swagger/v1/swagger.json#/Counter](http://localhost:5000/swagger/index.html?url=/swagger/v1/swagger.json#/Counter)
@@ -107,7 +107,7 @@ For instance, I could introduce a `kfzteile24.CodingTask.Core` project where I w
 
 Or, I could create UI using MVC with Razor view.
 
-Or, I could implement an example which demonstrates how to use the provided API from the client side, for instance by using jQuery. Or, even provide a simple SPA application using Vue or Angular framework in a couple of jasmine to run UI tests. My knowledge allows me to do it.
+Or, I could implement an example which demonstrates how to use the provided API from the client side, for instance by using jQuery. Or, even provide a simple SPA application using Vue or Angular framework along with jasmine to run UI tests. My knowledge allows me to do it.
 
 Or, or, or…
 
