@@ -8,8 +8,8 @@
     4. [kfzteile24.CodingTask.Web](#web)
 2. [Installation](#installation)
 3. [Testing](#testing)
-    1. [Run unit tests from command line](#unt-tests)
-    2. [Run UI using Swagger](#swagger-tests)
+    1. [Run unit tests from the command line](#unt-tests)
+    2. [Test using Swagger ](#swagger-tests)
 4. [Further improvements](#further-improvements)
 
 ## Solution Structure <a name="solution-structure"></a>
